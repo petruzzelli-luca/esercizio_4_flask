@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flask</title>
 </head>
+
 <body>
-    <p>ciaoooooooooooooooo</p>
     {% if lista%}
-        {% for elemento in lista %}
-            <li>{{elemento}}</li>
-        {% endfor %}
+    {% for elemento in lista %}
+    <li>{{elemento}}</li>
+    {% endfor %}
     {% else %}
     {% endif %}
+
+    <h1>aggiungi una stringa alla lista</h1>
+    <form method="post" action="/aggiungi">
+        <input type="text" name="aggiunta" required>
+        <button type="submit">Invia</button>
+    </form>
+
 </body>
+
 </html>
